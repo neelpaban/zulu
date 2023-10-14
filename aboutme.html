@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutme.css">
+    <style>
+/* aboutme.css */
+
+/* Container Styles */
+.profile-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Header Styles */
+.card-header {
+    background: #3498db;
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.pic {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name {
+    color: #fff;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.desc {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Content Styles */
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Interactive Styles */
+.contact-btn {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #fff;
+    background: #3498db;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.contact-btn:hover {
+    background: #fff;
+    color: #3498db;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .card-header {
+        padding: 40px 20px;
+    }
+
+    .name {
+        font-size: 28px;
+    }
+
+    .desc {
+        font-size: 16px;
+    }
+
+    .contact-btn {
+        padding: 10px 40px;
+    }
+}
+
+/* Add any other styles specific to the About Me page */
+/* aboutme.css */
+
+/* Container Styles */
+
+
+/* Footer Styles */
+.card-footer {
+    background: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #3498db;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.footer-link:hover {
+    color: #0077b6; /* Change the color on hover */
+}
+
+/* Add any other styles specific to the About Me page */
+
+
+        </style>
+</head>
+<body>
+    <div class="profile-card">
+        <div class="card-header">
+            <div class="pic">
+                <img src="pic.jpg" alt="Your Name">
+            </div>
+            <div class="name">Your Name</div>
+            <div class="desc">Web Developer & Designer</div>
+            <div class="sm">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-github"></a>
+                <a href="#" class="fab fa-linkedin-in"></a>
+            </div>
+            <a href="contact.html" class="contact-btn">Contact Me</a>
+        </div>
+        <div class="card-content">
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate web developer and designer with a strong focus on creating beautiful and user-friendly websites. With expertise in HTML, CSS, JavaScript, and more, I'm dedicated to building exceptional online experiences. Let's work together to turn your web project into a success!
+            </p>
+        </div>
+        <div class="card-footer">
+            <div class="numbers">
+                <div class="item">
+                    <a href="blog.html"><span>Blog</span></a>
+                </div>
+                <div class="border"></div>
+                <div class="item">
+                    <a href="skills.html"><span>Skills</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

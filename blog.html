@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zulu's Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    *{
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow: visible;
+}
+
+body{
+  height: 100vh;
+  background: url(pic1.jpg) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-card{
+  width: 400px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: scroll;
+  
+}
+
+.card-header{
+  background: #2c3a47;
+  padding: 60px 40px;
+  
+}
+/* Content Styles */
+.card-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.card-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-decoration: dotted wavy coral 10px;
+}
+
+.card-content p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.pic{
+  display: inline-block;
+  padding: 8px;
+  background: linear-gradient(130deg, #74b9ff, #e66767);
+  margin: auto;
+  border-radius: 50%;
+  background-size: 200% 200%;
+  animation: animated-gradient 2s linear infinite;
+}
+
+@keyframes animated-gradient{
+  25%{
+    background-position: left bottom;
+  }
+  50%{
+    background-position: right bottom;
+  }
+  75%{
+    background-position: right top;
+  }
+  100%{
+    background-position: left top;
+  }
+}
+
+.pic img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.name{
+  color: #f2f2f2;
+  font-size: 28px;
+  font-weight: 600;
+  margin: 10px 0;
+  text-decoration: dashed;
+}
+
+.desc{
+  font-size: 18px;
+  color: #e66767;
+}
+
+.sm{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.sm a{
+  color: #f2f2f2;
+  width: 56px;
+  font-size: 22px;
+  transition: .3s linear;
+}
+
+.sm a:hover{
+  color: #e66767;
+}
+.h2{text-decoration: dotted;}
+
+.contact-btn{
+  display: inline-block;
+  padding: 12px 50px;
+  color: #e66767;
+  border: 2px solid #e66767;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: .3s linear;
+}
+
+.contact-btn:hover{
+  background: #e66767;
+  color: #f2f2f2;
+}
+
+.card-footer{
+  background: #f4f4f4;
+  padding: 30px 5px;
+  overflow-x: scroll;
+}
+
+
+
+.numbers{
+  display: flex;
+  align-items: center;
+}
+
+.item{
+  flex: 1;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #e66767;
+}
+
+.item span{
+  display: block;
+  color: #e66767;
+  font-size: 20px;
+}
+
+.border{
+  width: 1px;
+  height: 30px;
+  background: #bbb;
+}
+
+/* Style the article container */
+
+article {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: scale(1.02);
+}
+
+/* Style article titles */
+article h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Style article content */
+article p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Style read more links */
+article a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.2s;
+}
+
+article a:hover {
+    background-color: #555;
+}
+
+/* Style the inline-page container */
+.inline-page {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.inline-page h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.inline-page p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.inline-page .close-btn {
+    display: block;
+    text-align: right;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+/* Add responsive styles for the inline-page */
+@media (max-width: 768px) {
+    .inline-page {
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .inline-page h2 {
+        font-size: 18px;
+    }
+    
+    .inline-page p {
+        font-size: 14px;
+    }
+}
+
+</style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="card-header">
+      <div class="pic">
+        <img src="pic.jpg" alt="">
+      </div>
+      <a href="index.html"><div class="name">Chebika Gogoi</div></a>
+      <div class="desc">Developer & Designer & Blogger</div>
+      <div class="name">My Blog</div>
+    </div>
+    
+    <div class="card-footer">
+        <div class="card-content">
+            <article>
+                <h2>Why Indian Air Force Day is observed on 8th October?</h2>
+                <a href="#" class="read-more">Read more</a>
+                <div class="inline-page">
+                    <a href="#" class="close-btn">Close</a>
+                    <h2>Why Indian Air Force Day is observed on 8th October?</h2>
+                    <p>Air Force Day is an annual celebration that is observed by several nations with an armed force. India 
+                        celebrates Air Force Day on October 8 to raise awareness about the Indian Air Force (IAF) as an organisation 
+                        that strives to strengthen national security and authority.<br>The Indian Air Force is the fourth largest air force in the world. Its Hindon Air Force Station located in UP’s Ghaziabad is the largest in Asia.
+                        The Indian Air Force is the fourth largest air force in the world. Its Hindon Air Force Station located in UP’s Ghaziabad is the largest in Asia.
+    <br> The motto of the IAF is ‘Nabha Sparsham Deeptham’, which means ‘touch the sky with glory’. It was taken from the 11th chapter of 
+    the Bhagavad Gita, which comprises the discourse given by Lord Krishna on the battlefield of Kurukshetra.<br>The President of India holds the rank of Supreme Commander of the IAF. The Chief of Air Staff, an air chief marshal, is a four-star officer and is responsible 
+    for the bulk of operational command of the Air Force. There is never more than one serving ACM at any given time in the IAF.
+    
+                    </p>
+                </div>
+            </article>
+
+            <article>
+                <h2>Why Indian Air Force Day is observed on 8th October?</h2>
+                <a href="#" class="read-more">Read more</a>
+                <div class="inline-page">
+                    <a href="#" class="close-btn">Close</a>
+                    <h2>Why Indian Air Force Day is observed on 8th October?</h2>
+                    <p>Air Force Day is an annual celebration that is observed by several nations with an armed force. India 
+                        celebrates Air Force Day on October 8 to raise awareness about the Indian Air Force (IAF) as an organisation 
+                        that strives to strengthen national security and authority.<br>The Indian Air Force is the fourth largest air force in the world. Its Hindon Air Force Station located in UP’s Ghaziabad is the largest in Asia.
+                        The Indian Air Force is the fourth largest air force in the world. Its Hindon Air Force Station located in UP’s Ghaziabad is the largest in Asia.
+    <br> The motto of the IAF is ‘Nabha Sparsham Deeptham’, which means ‘touch the sky with glory’. It was taken from the 11th chapter of 
+    the Bhagavad Gita, which comprises the discourse given by Lord Krishna on the battlefield of Kurukshetra.<br>The President of India holds the rank of Supreme Commander of the IAF. The Chief of Air Staff, an air chief marshal, is a four-star officer and is responsible 
+    for the bulk of operational command of the Air Force. There is never more than one serving ACM at any given time in the IAF.
+    
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
